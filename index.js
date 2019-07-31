@@ -22,7 +22,7 @@ const config = require('./constant');
   })
   console.log('页面加载完毕')
   
-  let length = 0
+  let length = 0, detail
   try {
     // 获取issue-list长度
     length = await page.$eval('.issue-list',(el) => 
@@ -32,6 +32,10 @@ const config = require('./constant');
         ).length)
     
     for (let i = 0; i < length; i++) {
+
+      // issue详情
+      detail = await page.$eval(`.issue-list li:nth-child(${i + 1}) .issue-link-summary`, el => el.innerText)
+
       await page.click(`.issue-list li:nth-child(${i + 1})`)
       // console.log('点击item')
       
@@ -48,8 +52,11 @@ const config = require('./constant');
       await page.click('#issue-workflow-transition-submit')
       // console.log('点击解决')
 
+      // const detail = await page.$eval('#summary-val', (el) => el.innerText())
+
       await page.waitFor(1000)
       console.log(`【${i + 1}】 issue标记完成...`)
+      console.log(`    - ${detail}`);  
     }
     browser.close()
   } catch (error) {

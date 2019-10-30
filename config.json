@@ -1,0 +1,18 @@
+{
+  "iwork_url": "http://icode.58corp.com/v3/#/versionflow/detail/compile?mvId=201151&id=16586",
+  "iwork_cookies": [
+    {
+      "name": "icode.58corp.com",
+      "value": "ST-1173903-xG6DrapD6sOEaNyWHmp6-passport-58corp-com",
+      "domain": "icode.58corp.com"
+    }
+  ],
+  "cloud_url": "http://yun.58corp.com/#/test-env?clusterid=6804&clusterName=etongzhen_basic_spa&imageName=etongzhen_basic_spa&condition=true",
+  "cloud_cookies": [
+    {
+      "name": "SSO_SESSION_ID",
+      "value": "ST-1174205-6GGrMI64yitg03ChfjRt-passport-58corp-com",
+      "domain": "yun.58corp.com"
+    }
+  ]
+}
